@@ -3,22 +3,20 @@ class Solution {
         int i = 0;
         while(i < nums.length)
         {
-            if(nums[i] != i + 1)
-            {
                 int correct = nums[i] - 1;
                 if(nums[i] != nums[correct])
                 {
                     swap(nums, i , correct);
                 }
-                else
+                 else
                 {
-                   return nums[i];
+                    i++;
                 }
-            }
-            else
-            {
-                i++;
-            }
+        }
+        
+        for(int j = 0; j < nums.length; j++)
+        {
+            return nums[nums.length - 1];
         }
         return -1;
     }
